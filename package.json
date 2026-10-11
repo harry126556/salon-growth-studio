@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "preview": "opennextjs-cloudflare build --skipWranglerConfigCheck && opennextjs-cloudflare preview --config=./wrangler.jsonc",
-    "deploy": "opennextjs-cloudflare build --skipWranglerConfigCheck && opennextjs-cloudflare deploy --config=./wrangler.jsonc"
+    "preview": "SKIP_WRANGLER_CONFIG_CHECK=yes opennextjs-cloudflare build && SKIP_WRANGLER_CONFIG_CHECK=yes opennextjs-cloudflare preview",
+    "deploy": "SKIP_WRANGLER_CONFIG_CHECK=yes opennextjs-cloudflare build && SKIP_WRANGLER_CONFIG_CHECK=yes opennextjs-cloudflare deploy"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.11",
